@@ -1,0 +1,31 @@
+
+.containerMenu {
+    background-color: gray;
+    width: 70vw;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: var(--color-bg-primary);
+    border-radius: 30px; /*fazer variáveis disto depois */
+}
+
+li {
+    display: block;
+    color: var(--color-text-paragraph-light);
+    font-family: var(--font-body);
+    font-size: var(--paragraph-default-size);
+}
+
+li:hover {
+    color: yellow;
+    cursor: pointer;
+}
+
+.imagemCapivara {
+    height: 80px;
+    width: auto;
+    position: relative;
+    top: -13px;
+}

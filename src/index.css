@@ -1,68 +1,268 @@
+@import url('https://fonts.googleapis.com/css?family=Tiro+Devanagari+Sanskrit:regular,italic&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Titan+One:regular&display=swap');
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  /* ========================================
+     CORES / COLORS
+     ======================================== */
+
+  /* Color/brand */
+  --color-primary-dark: #006828;
+  --color-primary-light: #A1D676;
+  --color-secondary: #F1F0DF;
+
+  /* Color/background */
+  --color-bg-primary: #006828;
+  --color-bg-secondary: #EFEEDF;
+
+  /* Color/text/display */
+  --color-text-display-primary-light: #A1D676;
+  --color-text-display-secondary: #EAEBC5;
+  --color-text-display-primary-dark: #006828;
+
+  /* Color/text/paragraph */
+  --color-text-paragraph-light: #F5F5F5;
+  --color-text-paragraph-dark: #2E2E2E;
+
+
+  /* ========================================
+     TIPOGRAFIA / TYPOGRAPHY
+     ======================================== */
+
+  /* Font Families */
+  --font-display: 'Titan One', cursive;
+  --font-body: 'Tiro Devanagari Marathi', serif;
+
+
+  /* ========================================
+     HERO HEADING
+     ======================================== */
+
+  /* Hero Heading - Desktop */
+  --hero-heading-desktop-size: 182.3px;
+  --hero-heading-desktop-line-height: 90%;
+  --hero-heading-desktop-letter-spacing: -4%;
+
+  /* Hero Heading - Tablet */
+  --hero-heading-tablet-size: 121.5px;
+  --hero-heading-tablet-line-height: 90%;
+  --hero-heading-tablet-letter-spacing: -3%;
+
+  /* Hero Heading - Mobile */
+  --hero-heading-mobile-size: 80px;
+  --hero-heading-mobile-line-height: 90%;
+  --hero-heading-mobile-letter-spacing: -3%;
+
+
+  /* ========================================
+     MARKETING HEADING H1
+     ======================================== */
+
+  /* Marketing H1 - Desktop */
+  --marketing-h1-desktop-size: 160px;
+  --marketing-h1-desktop-line-height: 109%;
+  --marketing-h1-desktop-letter-spacing: -4%;
+
+  /* Marketing H1 - Tablet */
+  --marketing-h1-tablet-size: 88px;
+  --marketing-h1-tablet-line-height: 109%;
+  --marketing-h1-tablet-letter-spacing: -4%;
+
+  /* Marketing H1 - Mobile */
+  --marketing-h1-mobile-size: 56px;
+  --marketing-h1-mobile-line-height: 90%;
+  --marketing-h1-mobile-letter-spacing: -3%;
+
+
+  /* ========================================
+     MARKETING HEADING H2
+     ======================================== */
+
+  /* Marketing H2 - Desktop */
+  --marketing-h2-desktop-size: 130px;
+  --marketing-h2-desktop-line-height: 120%;
+  --marketing-h2-desktop-letter-spacing: -4%;
+
+  /* Marketing H2 - Tablet */
+  --marketing-h2-tablet-size: 64px;
+  --marketing-h2-tablet-line-height: 139%;
+  --marketing-h2-tablet-letter-spacing: -4%;
+
+  /* Marketing H2 - Mobile */
+  --marketing-h2-mobile-size: 40px;
+  --marketing-h2-mobile-line-height: 152%;
+  --marketing-h2-mobile-letter-spacing: -3%;
+
+
+  /* ========================================
+     PARAGRAPH FONTS
+     ======================================== */
+
+  /* Paragraph - Ultra Large */
+  --paragraph-ultra-large-size: 64px;
+  --paragraph-ultra-large-line-height: 85%;
+  --paragraph-ultra-large-letter-spacing: 1%;
+
+  /* Paragraph - Large */
+  --paragraph-large-size: 54px;
+  --paragraph-large-line-height: 72%;
+  --paragraph-large-letter-spacing: 1%;
+
+  /* Paragraph - Medium */
+  --paragraph-medium-size: 36px;
+  --paragraph-medium-line-height: 100%;
+  --paragraph-medium-letter-spacing: 1%;
+
+  /* Paragraph - Little */
+  --paragraph-little-size: 24px;
+  --paragraph-little-line-height: 32%;
+  --paragraph-little-letter-spacing: 0%;
+
+  /* Paragraph - Default */
+  --paragraph-default-size: 16px;
+  --paragraph-default-line-height: 21%;
+  --paragraph-default-letter-spacing: 0%;
+}
+
+
+/* ========================================
+   CLASSES UTILITÁRIAS / UTILITY CLASSES
+   ======================================== */
+
+/* Hero Heading Classes */
+.hero-heading-desktop {
+  font-family: var(--font-display);
+  font-size: var(--hero-heading-desktop-size);
+  line-height: var(--hero-heading-desktop-line-height);
+  letter-spacing: var(--hero-heading-desktop-letter-spacing);
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  text-transform: uppercase;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+.hero-heading-tablet {
+  font-family: var(--font-display);
+  font-size: var(--hero-heading-tablet-size);
+  line-height: var(--hero-heading-tablet-line-height);
+  letter-spacing: var(--hero-heading-tablet-letter-spacing);
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
-body {
+.hero-heading-mobile {
+  font-family: var(--font-display);
+  font-size: var(--hero-heading-mobile-size);
+  line-height: var(--hero-heading-mobile-line-height);
+  letter-spacing: var(--hero-heading-mobile-letter-spacing);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+
+/* Marketing H1 Classes */
+.marketing-heading-h1-desktop {
+  font-family: var(--font-display);
+  font-size: var(--marketing-h1-desktop-size);
+  line-height: var(--marketing-h1-desktop-line-height);
+  letter-spacing: var(--marketing-h1-desktop-letter-spacing);
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.marketing-heading-h1-tablet {
+  font-family: var(--font-display);
+  font-size: var(--marketing-h1-tablet-size);
+  line-height: var(--marketing-h1-tablet-line-height);
+  letter-spacing: var(--marketing-h1-tablet-letter-spacing);
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.marketing-heading-h1-mobile {
+  font-family: var(--font-display);
+  font-size: var(--marketing-h1-mobile-size);
+  line-height: var(--marketing-h1-mobile-line-height);
+  letter-spacing: var(--marketing-h1-mobile-letter-spacing);
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+
+/* Marketing H2 Classes */
+.marketing-heading-h2-desktop {
+  font-family: var(--font-display);
+  font-size: var(--marketing-h2-desktop-size);
+  line-height: var(--marketing-h2-desktop-line-height);
+  letter-spacing: var(--marketing-h2-desktop-letter-spacing);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.marketing-heading-h2-tablet {
+  font-family: var(--font-display);
+  font-size: var(--marketing-h2-tablet-size);
+  line-height: var(--marketing-h2-tablet-line-height);
+  letter-spacing: var(--marketing-h2-tablet-letter-spacing);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.marketing-heading-h2-mobile {
+  font-family: var(--font-display);
+  font-size: var(--marketing-h2-mobile-size);
+  line-height: var(--marketing-h2-mobile-line-height);
+  letter-spacing: var(--marketing-h2-mobile-letter-spacing);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+
+/* Paragraph Classes */
+.paragraph-ultra-large {
+  font-family: var(--font-body);
+  font-size: var(--paragraph-ultra-large-size);
+  line-height: var(--paragraph-ultra-large-line-height);
+  letter-spacing: var(--paragraph-ultra-large-letter-spacing);
+  font-weight: 400;
+}
+
+.paragraph-large {
+  font-family: var(--font-body);
+  font-size: var(--paragraph-large-size);
+  line-height: var(--paragraph-large-line-height);
+  letter-spacing: var(--paragraph-large-letter-spacing);
+  font-weight: 400;
+}
+
+.paragraph-medium {
+  font-family: var(--font-body);
+  font-size: var(--paragraph-medium-size);
+  line-height: var(--paragraph-medium-line-height);
+  letter-spacing: var(--paragraph-medium-letter-spacing);
+  font-weight: 400;
+}
+
+.paragraph-little {
+  font-family: var(--font-body);
+  font-size: var(--paragraph-little-size);
+  line-height: var(--paragraph-little-line-height);
+  letter-spacing: var(--paragraph-little-letter-spacing);
+  font-weight: 400;
+}
+
+.paragraph-default {
+  font-family: var(--font-body);
+  font-size: var(--paragraph-default-size);
+  line-height: var(--paragraph-default-line-height);
+  letter-spacing: var(--paragraph-default-letter-spacing);
+  font-weight: 400;
+}
+/*Começa a baixo*/
+
+*{
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+  padding: 0;
+  box-sizing: border-box;
 }
