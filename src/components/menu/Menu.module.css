@@ -1,8 +1,9 @@
 
 .containerMenu {
-    background-color: gray;
     width: 70vw;
     height: 50px;
+    margin-top: 10vh; /*apague isto */
+    max-width: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,4 +29,23 @@ li:hover {
     width: auto;
     position: relative;
     top: -13px;
+}
+
+@media only screen and (max-width: 390px) {
+    .containerMenu {
+        width: 80vw;
+        gap: 0.2rem;
+    }
+}
+@media only screen and (min-width: 600px) {
+    .containerMenu {
+        width: 50vw;
+        max-width: 350px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+    .containerMenu {
+        width: 50vw;
+    }
 }
