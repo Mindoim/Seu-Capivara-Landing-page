@@ -1,0 +1,24 @@
+.containerSeuCapivara{
+    text-align: center;
+    color: var(--color-text-display-primary-light);
+}
+
+.containerSeuCapivara span{
+    color: var(--color-text-display-primary-dark);
+}
+
+.containerSeuCapivara h1{
+    font-size: clamp(19vw, var(--hero-heading-mobile-size), 4vw);
+}
+
+@media (min-width: 600px) and (max-width: 999px) {
+    .containerSeuCapivara h1{
+        font-size: clamp( 15vw, var(--hero-heading-tablet-size), 4vw);
+    }
+}
+
+@media (min-width: 999px) {
+    .containerSeuCapivara h1{
+        font-size: clamp( 10vw, var(--hero-heading-desktop-size), 12vw);
+    }
+}
