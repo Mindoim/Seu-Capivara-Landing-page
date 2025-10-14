@@ -1,5 +1,49 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.ContainerMarketingAnimacao {
+    width: 100vw;  /* ← mudei de 100vh para 100vw */
+    height: 15vh;
+    background-color: var(--color-bg-primary);
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    overflow: hidden;  /* ← importante! */
+    position: relative;
+}
+
+.itemTexto {
+    display: inline-block;
+    color: var(--color-text-paragraph-light);
+    white-space: nowrap;
+    font-family: var(--font-body);
+    font-size: var(--paragraph-little-size);
+    padding: 0.5rem 1rem;  /* ← adiciona espaçamento */
+
+    /* Animação */
+    animation: scroll 20s linear infinite;  /* ← aplica animação */
+}
+
+/* Keyframes da animação */
+@keyframes scroll {
+    from {
+        transform: translateX(0vw);  /* começa fora da tela (direita) */
+    }
+    to {
+        transform: translateX(-1000%);  /* termina fora da tela (esquerda) */
+    }
+}
+
+/* Otimização GPU (opcional mas recomendado) */
+.itemTexto {
+    will-change: transform;  /* ← avisa o navegador pra usar GPU */
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .itemTexto{
+        font-size: calc(var(--paragraph-medium-size) - 6px);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .itemTexto {
+        font-size: var(--paragraph-medium-size);
+    }
 }

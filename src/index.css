@@ -41,17 +41,17 @@
   /* Hero Heading - Desktop */
   --hero-heading-desktop-size: 182.3px;
   --hero-heading-desktop-line-height: 90%;
-  --hero-heading-desktop-letter-spacing: -4%;
+  --hero-heading-desktop-letter-spacing: -4px;
 
   /* Hero Heading - Tablet */
   --hero-heading-tablet-size: 121.5px;
   --hero-heading-tablet-line-height: 90%;
-  --hero-heading-tablet-letter-spacing: -3%;
+  --hero-heading-tablet-letter-spacing: -3px;
 
   /* Hero Heading - Mobile */
   --hero-heading-mobile-size: 80px;
   --hero-heading-mobile-line-height: 90%;
-  --hero-heading-mobile-letter-spacing: -3%;
+  --hero-heading-mobile-letter-spacing: -2.5px;
 
 
   /* ========================================
@@ -116,12 +116,17 @@
   /* Paragraph - Little */
   --paragraph-little-size: 24px;
   --paragraph-little-line-height: 32%;
-  --paragraph-little-letter-spacing: 0%;
+  --paragraph-little-letter-spacing: -4px;
 
   /* Paragraph - Default */
   --paragraph-default-size: 16px;
   --paragraph-default-line-height: 21%;
-  --paragraph-default-letter-spacing: 0%;
+  --paragraph-default-letter-spacing: -1px;
+
+/*  Paragraph animation devices*/
+  --paragraph-animation-fontsize-mobile: 24px;
+  --paragraph-animation-fontsize-tablet: 36px;
+  --paragraph-animation-fontsize-desktop: 48px;
 }
 
 
@@ -130,7 +135,7 @@
    ======================================== */
 
 /* Hero Heading Classes */
-.hero-heading-desktop {
+.heroHeadingDesktop {
   font-family: var(--font-display);
   font-size: var(--hero-heading-desktop-size);
   line-height: var(--hero-heading-desktop-line-height);
@@ -139,7 +144,7 @@
   text-transform: uppercase;
 }
 
-.hero-heading-tablet {
+.heroHeadingTablet {
   font-family: var(--font-display);
   font-size: var(--hero-heading-tablet-size);
   line-height: var(--hero-heading-tablet-line-height);
@@ -148,7 +153,7 @@
   text-transform: uppercase;
 }
 
-.hero-heading-mobile {
+.heroHeadingMobile {
   font-family: var(--font-display);
   font-size: var(--hero-heading-mobile-size);
   line-height: var(--hero-heading-mobile-line-height);
