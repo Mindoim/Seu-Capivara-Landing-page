@@ -1,0 +1,95 @@
+.ContainerConheçaNossosProdutos {
+    margin-top: 30px;
+    margin-bottom: 30px; /*apagar isto*/
+    width: 100%;  /* ← mais simples que 100vw */
+    display: flex;
+    align-items: center;
+}
+
+.containerEsquerda {
+    flex: 0 0 45%;  /* ← mais flexível que 40vw */
+    height: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--color-text-paragraph-light);
+}
+
+.containerDireita {
+    flex: 1;  /* ← ocupa o resto (60%) */
+    height: 40px;
+    border-left: 1px solid var(--color-text-paragraph-light);
+    border-top: 1px solid var(--color-text-paragraph-light);
+}
+
+.containerEsquerda p {
+    color: var(--color-text-paragraph-light);
+    font-family: var(--font-body);
+    margin: 0;
+}
+
+/*Celulares muito pequenos*/
+@media screen and (max-width: 370px) {
+    .containerEsquerda {
+        flex: 0 0 60%;
+    }
+}
+
+/*Celulares médios*/
+
+@media screen and (min-width: 371px) and (max-width: 411px) {
+    .containerEsquerda {
+        flex: 0 0 50%;
+    }
+}
+
+/*Tablet padrão vertical*/
+
+@media screen and (min-width: 768px) {
+    .containerEsquerda p {
+        font-size: var(--paragraph-little-size);
+    }
+
+    .containerEsquerda {
+        height: 50px;
+        flex: 0 0 40%;
+    }
+
+    .containerDireita{
+        height: 50px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .containerEsquerda p {
+        font-size: var(--paragraph-little-size);
+    }
+
+    .containerEsquerda {
+        flex: 0 0 30%;
+        border-right: 2px solid var(--color-text-paragraph-light);
+        border-bottom: 2px solid var(--color-text-paragraph-light);
+        height: 60px;
+    }
+
+    .containerDireita{
+        height: 60px;
+        border-top: 2px solid var(--color-text-paragraph-light);
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+    .containerEsquerda p {
+        font-size: var(--paragraph-medium-size);
+    }
+
+    .containerEsquerda {
+        height: 80px;
+    }
+
+    .containerDireita {
+        height: 80px;
+    }
+}

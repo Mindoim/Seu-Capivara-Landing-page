@@ -1,10 +1,12 @@
 import './App.css'
-import Menu from "./components/menu/Menu.jsx";
+import Hero from "./components/Hero/Hero.jsx";
+import Marketing from "./components/Marketing/Marketing.jsx";
 
 function App() {
     return (
         <>
-            <Menu></Menu>
+            <Hero />
+            <Marketing />
         </>
     )
 }

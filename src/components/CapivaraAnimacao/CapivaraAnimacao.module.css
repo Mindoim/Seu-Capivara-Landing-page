@@ -1,0 +1,31 @@
+.GifCapivara {
+    position: absolute;
+    width: 80vw;
+    height: auto;
+    bottom: 14.5vh;
+    left: 100vw;
+    animation: CapivaraAndando 3s linear infinite;
+}
+
+@keyframes CapivaraAndando {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-200vw);
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .GifCapivara {
+        width: 60vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .GifCapivara {
+        width: 35vw;
+        animation: CapivaraAndando 5s linear infinite;
+    }
+}
