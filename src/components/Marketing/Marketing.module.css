@@ -1,0 +1,21 @@
+.ContainerMarketing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    width: 100svw;
+    max-width: 100svw;
+    height: 100svh;
+    max-height: 100svh;
+    background-color: var(--color-bg-primary);
+}
+
+@media screen and (min-width: 1023px){
+    .ContainerMarketing{
+        background-color: var(--color-bg-primary);
+        height: 120svh;
+        max-height: 120svh;
+
+    }
+}

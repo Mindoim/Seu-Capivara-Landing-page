@@ -59,19 +59,19 @@
      ======================================== */
 
   /* Marketing H1 - Desktop */
-  --marketing-h1-desktop-size: 160px;
+  --marketing-h1-desktop-size: 120px;
   --marketing-h1-desktop-line-height: 109%;
-  --marketing-h1-desktop-letter-spacing: -4%;
+  --marketing-h1-desktop-letter-spacing: -3px;
 
   /* Marketing H1 - Tablet */
   --marketing-h1-tablet-size: 88px;
   --marketing-h1-tablet-line-height: 109%;
-  --marketing-h1-tablet-letter-spacing: -4%;
+  --marketing-h1-tablet-letter-spacing: -3px;
 
   /* Marketing H1 - Mobile */
-  --marketing-h1-mobile-size: 56px;
+  --marketing-h1-mobile-size: 52px;
   --marketing-h1-mobile-line-height: 90%;
-  --marketing-h1-mobile-letter-spacing: -3%;
+  --marketing-h1-mobile-letter-spacing: -2px;
 
 
   /* ========================================
@@ -79,19 +79,19 @@
      ======================================== */
 
   /* Marketing H2 - Desktop */
-  --marketing-h2-desktop-size: 130px;
+  --marketing-h2-desktop-size: 88px;
   --marketing-h2-desktop-line-height: 120%;
-  --marketing-h2-desktop-letter-spacing: -4%;
+  --marketing-h2-desktop-letter-spacing: -1px;
 
   /* Marketing H2 - Tablet */
   --marketing-h2-tablet-size: 64px;
   --marketing-h2-tablet-line-height: 139%;
-  --marketing-h2-tablet-letter-spacing: -4%;
+  --marketing-h2-tablet-letter-spacing: -2.5px;
 
   /* Marketing H2 - Mobile */
   --marketing-h2-mobile-size: 40px;
   --marketing-h2-mobile-line-height: 152%;
-  --marketing-h2-mobile-letter-spacing: -3%;
+  --marketing-h2-mobile-letter-spacing: -1px;
 
 
   /* ========================================
@@ -125,8 +125,8 @@
 
 /*  Paragraph animation devices*/
   --paragraph-animation-fontsize-mobile: 24px;
-  --paragraph-animation-fontsize-tablet: 36px;
-  --paragraph-animation-fontsize-desktop: 48px;
+  --paragraph-animation-fontsize-tablet: 28px;
+  --paragraph-animation-fontsize-desktop: 30px;
 }
 
 
@@ -185,6 +185,7 @@
 }
 
 .marketing-heading-h1-mobile {
+
   font-family: var(--font-display);
   font-size: var(--marketing-h1-mobile-size);
   line-height: var(--marketing-h1-mobile-line-height);
@@ -196,6 +197,15 @@
 
 
 /* Marketing H2 Classes */
+.marketing-heading-h2-mobile {
+  font-family: var(--font-display);
+  font-size: var(--marketing-h2-mobile-size);
+  line-height: var(--marketing-h2-mobile-line-height);
+  letter-spacing: var(--marketing-h2-mobile-letter-spacing);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
 .marketing-heading-h2-desktop {
   font-family: var(--font-display);
   font-size: var(--marketing-h2-desktop-size);
@@ -214,15 +224,90 @@
   text-transform: uppercase;
 }
 
-.marketing-heading-h2-mobile {
-  font-family: var(--font-display);
-  font-size: var(--marketing-h2-mobile-size);
-  line-height: var(--marketing-h2-mobile-line-height);
-  letter-spacing: var(--marketing-h2-mobile-letter-spacing);
-  font-weight: 400;
-  text-transform: uppercase;
+/*Começo da animação de typing*/
+
+.DivAnimacaoTextoDigitando{
+  height: 10vh;
+  text-align: center;
+  font-size: var(--paragraph-animation-fontsize-mobile);
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
 }
 
+.AnimacaoTextoDigitando{
+  color: var(--color-text-paragraph-dark);
+  /*font-family: var(--font-body), Arial, Helvetica, sans-serif;*/
+  letter-spacing: var(--paragraph-default-letter-spacing);
+  font-size: inherit;
+  line-height: 100%;
+  text-align: inherit;
+  display: inline-block;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  .DivAnimacaoTextoDigitando {
+    font-size: var(--paragraph-animation-fontsize-tablet);
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .DivAnimacaoTextoDigitando {
+    font-size: var(--paragraph-animation-fontsize-desktop);
+    height: 15vh;
+  }
+}
+
+.MarketingAnimacaoText{
+  color: var(--color-text-paragraph-light) ;
+}
+
+@media screen and (min-width: 320px) and (max-width: 375px) {
+  .MarketingAnimacaoText{
+    color: var(--color-text-paragraph-light);
+    font-size: 20px;
+    margin: 48px 0 24px 0 ;
+  }
+}
+
+@media screen and (min-width: 376px) and (max-width: 427px) {
+  .MarketingAnimacaoText{
+    color: var(--color-text-paragraph-light);
+    margin: 48px 0 -36px 0 ;
+  }
+}
+
+@media screen and (min-width: 428px) {
+  .MarketingAnimacaoText{
+    color: var(--color-text-paragraph-light);
+    margin: 64px 0 -48px 0 ;
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .MarketingAnimacaoText{
+    color: var(--color-text-paragraph-light);
+    margin: 64px 0 -48px 0 ;
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1441px) {
+  .MarketingAnimacaoText{
+    color: var(--color-text-paragraph-light);
+    /*margin: 24px 0 24px 0 ;*/
+    font-size: 48px;
+  }
+}
+
+@media screen and (min-width: 1442px) {
+  .MarketingAnimacaoText{
+    color: var(--color-text-paragraph-light);
+    font-size: 48px;
+  }
+}
+
+
+/*Fim da animação*/
 
 /* Paragraph Classes */
 .paragraph-ultra-large {
@@ -270,4 +355,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body{
+  max-width: 100vw;
+  overflow-x: hidden;
 }

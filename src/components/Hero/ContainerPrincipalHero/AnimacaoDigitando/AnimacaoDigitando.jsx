@@ -1,9 +1,9 @@
 import {TypeAnimation} from 'react-type-animation';
-import styles from './AnimacaoDigitando.module.css'
 
 function AnimacaoDigitando() {
     return (
-        <div className={styles.DivText}><TypeAnimation className={styles.Animacao}
+        <div class="DivAnimacaoTextoDigitando">
+            <TypeAnimation class="styles.AnimacaoTextoDigitando"
                             sequence={[
                                 '(Seja bem vindo!)', // Types 'One'
                                 2500,

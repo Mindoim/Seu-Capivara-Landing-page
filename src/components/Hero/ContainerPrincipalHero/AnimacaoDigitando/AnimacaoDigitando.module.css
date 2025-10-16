@@ -1,11 +1,11 @@
-.DivText{
+.DivAnimacaoTextoDigitando{
     /*border: 3px solid red;*/
     height: 10vh;
     text-align: center;
     font-size: var(--paragraph-animation-fontsize-mobile);
 }
 
-.Animacao{
+.AnimacaoTextoDigitando{
     color: var(--color-text-paragraph-dark);
     font-family: var(--font-body), Arial, Helvetica, sans-serif;
     letter-spacing: var(--paragraph-default-letter-spacing);
@@ -16,13 +16,13 @@
 }
 
 @media screen and (min-width: 767px) and (max-width: 1024px) {
-    .DivText {
+    .DivAnimacaoTextoDigitando {
         font-size: var(--paragraph-animation-fontsize-tablet);
     }
 }
 
 @media screen and (min-width: 1024px){
-    .DivText {
+    .DivAnimacaoTextoDigitando {
         font-size: var(--paragraph-animation-fontsize-desktop);
         height: 15vh;
     }
