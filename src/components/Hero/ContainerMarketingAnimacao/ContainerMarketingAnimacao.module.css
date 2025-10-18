@@ -1,6 +1,6 @@
 .ContainerMarketingAnimacao {
     width: 100vw;  /* ← mudei de 100vh para 100vw */
-    height: 15vh;
+    height: 15svh;
     background-color: var(--color-bg-primary);
     display: flex;
     align-items: center;
@@ -45,5 +45,16 @@
 @media screen and (min-width: 1024px) {
     .itemTexto {
         font-size: var(--paragraph-medium-size);
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .itemTexto {
+        font-size: var(--paragraph-medium-size);
+
+    }
+
+    .ContainerMarketingAnimacao{
+        height: 15%;
     }
 }
