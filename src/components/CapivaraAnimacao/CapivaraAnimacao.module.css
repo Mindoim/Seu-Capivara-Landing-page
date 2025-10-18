@@ -5,6 +5,7 @@
     bottom: 14.5vh;
     left: 100vw;
     animation: CapivaraAndando 3s linear infinite;
+    max-width: 576px;
 }
 
 @keyframes CapivaraAndando {
@@ -25,7 +26,14 @@
 
 @media screen and (min-width: 1024px) {
     .GifCapivara {
-        width: 35vw;
+        width: 30vw;
+        animation: CapivaraAndando 5s linear infinite;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .GifCapivara {
+        width: 25vw;
         animation: CapivaraAndando 5s linear infinite;
     }
 }

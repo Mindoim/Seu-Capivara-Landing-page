@@ -18,7 +18,7 @@ h1 {
 
 @media screen and (min-width: 768px) {
     .ContainerPrincipalHero {
-        width: 80svw;
+        width: 80%;
         height: 85svh;
         border-top: 0px;
         margin-top: 64px;
@@ -29,7 +29,8 @@ h1 {
 
 @media screen and (min-width: 1024px) {
     .ContainerPrincipalHero {
-        width: 90svw;
+        /*width: 90svw;*/
+        width: calc(100% - 128px);
         height: 85svh;
         border-top: 0px;
         margin-top: 64px;
@@ -40,12 +41,11 @@ h1 {
 
 @media screen and (min-width: 1600px) {
     .ContainerPrincipalHero {
-        width: 80svw;
-        max-width: 1500px;
-        height: 90svh;
+        margin-top: 24px;
+        width: 100%;
+        height: calc(85svh - 24px);
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
         border-top: 0px;
-        margin-top: 64px;
-        border-top-left-radius: 70px;
-        border-top-right-radius: 70px;
     }
 }
