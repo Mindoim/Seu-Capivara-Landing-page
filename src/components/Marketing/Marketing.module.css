@@ -14,8 +14,12 @@
 @media screen and (min-width: 1023px){
     .ContainerMarketing{
         background-color: var(--color-bg-primary);
-        height: 120svh;
-        max-height: 120svh;
-
+        height: auto;
+        min-height: 100svh;
+        max-height: fit-content;
+        justify-content: flex-start;
+        gap: 12px;
+        border: 1px solid red;
+        border-top: 20svh solid var(--color-bg-primary);
     }
 }
