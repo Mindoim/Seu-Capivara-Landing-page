@@ -126,7 +126,7 @@
 /*  Paragraph animation devices*/
   --paragraph-animation-fontsize-mobile: 24px;
   --paragraph-animation-fontsize-tablet: 28px;
-  --paragraph-animation-fontsize-desktop: 30px;
+  --paragraph-animation-fontsize-desktop: 24px;
 }
 
 
@@ -287,7 +287,7 @@
   .MarketingAnimacaoText{
     color: var(--color-text-paragraph-light);
     margin: 64px 0 -48px 0 ;
-    font-size: 32px;
+    font-size: 24px;
   }
 }
 
@@ -295,14 +295,14 @@
   .MarketingAnimacaoText{
     color: var(--color-text-paragraph-light);
     /*margin: 24px 0 24px 0 ;*/
-    font-size: 48px;
+    font-size: 28px;
   }
 }
 
 @media screen and (min-width: 1442px) {
   .MarketingAnimacaoText{
     color: var(--color-text-paragraph-light);
-    font-size: 48px;
+    font-size: 32px;
   }
 }
 

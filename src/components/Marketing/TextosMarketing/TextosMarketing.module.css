@@ -116,23 +116,23 @@
 
 @media screen and (min-width: 1440px) and (max-width: 1750px) {
     .titulo {
-        font-size: calc(var(--marketing-h1-desktop-size) + 12px);
+        font-size: var(--marketing-h1-desktop-size);
     }
 
     .subtitulo {
-        font-size: calc(var(--marketing-h2-desktop-size) + 8px);
+        font-size: var(--marketing-h2-desktop-size);
         line-height: var(--marketing-h2-desktop-line-height);
     }
 }
 
 @media screen and (min-width: 1751px) {
     .titulo {
-        font-size: calc(var(--marketing-h1-desktop-size) + 48px);
+        font-size: var(--marketing-h1-desktop-size) ;
         letter-spacing: calc(var(--marketing-h2-desktop-letter-spacing) + 4px);
     }
 
     .subtitulo {
-        font-size: calc(var(--marketing-h2-desktop-size) + 32px);
+        font-size: var(--marketing-h2-desktop-size);
         line-height: var(--marketing-h2-desktop-line-height);
     }
 }
