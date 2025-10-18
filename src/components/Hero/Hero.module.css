@@ -3,5 +3,10 @@
     max-width: 100%;
     position: relative;
     overflow: visible;
-    max-height: 100vh;
+    max-height: 100svh;
+    height: 100svh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--color-bg-primary);
 }

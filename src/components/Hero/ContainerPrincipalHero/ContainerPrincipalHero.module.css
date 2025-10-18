@@ -3,9 +3,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     max-width: 100%;
-    height: 85vh;
+    height: 85svh;
     background-image: url("../../../assets/fundoHero.jpeg");
     background-size: cover;
     border-top: 24px solid var(--color-bg-primary);
@@ -14,4 +14,38 @@
 
 h1 {
     margin-bottom: 32px;
+}
+
+@media screen and (min-width: 768px) {
+    .ContainerPrincipalHero {
+        width: 80svw;
+        height: 85svh;
+        border-top: 0px;
+        margin-top: 64px;
+        border-top-left-radius: 70px;
+        border-top-right-radius: 70px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .ContainerPrincipalHero {
+        width: 90svw;
+        height: 85svh;
+        border-top: 0px;
+        margin-top: 64px;
+        border-top-left-radius: 70px;
+        border-top-right-radius: 70px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .ContainerPrincipalHero {
+        width: 80svw;
+        max-width: 1500px;
+        height: 90svh;
+        border-top: 0px;
+        margin-top: 64px;
+        border-top-left-radius: 70px;
+        border-top-right-radius: 70px;
+    }
 }
