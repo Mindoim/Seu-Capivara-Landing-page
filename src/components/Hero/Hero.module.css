@@ -2,7 +2,7 @@
     width: 100%;
     max-width: 100%;
     /*position: relative;*/
-    overflow: visible;
+    overflow: hidden;
     max-height: 100svh;
     height: 100svh;
     display: flex;

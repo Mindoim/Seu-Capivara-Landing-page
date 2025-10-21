@@ -21,6 +21,7 @@
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .GifCapivara {
         width: 60vw;
+        bottom: 13.5vh;
     }
 }
 
@@ -30,10 +31,18 @@
         animation: CapivaraAndando 5s linear infinite;
     }
 }
+@media screen and (min-width: 1440px) {
+    .GifCapivara {
+        width: 30vw;
+        bottom: 13.5vh;
+        animation: CapivaraAndando 5s linear infinite;
+    }
+}
 
 @media screen and (min-width: 1600px) {
     .GifCapivara {
         width: 25vw;
+        bottom: 14.4vh;
         animation: CapivaraAndando 5s linear infinite;
     }
 }

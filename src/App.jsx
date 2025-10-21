@@ -2,6 +2,7 @@ import './App.css';
 import Hero from "./components/Hero/Hero.jsx";
 import Marketing from "./components/Marketing/Marketing.jsx";
 import Footer from "./components/Footer/Footer.jsx";
+import Item from "./components/Item/Item.jsx";
 
 // Dados para o Footer com links de imagens reais e links funcionais
 const mySocialLinks = [
@@ -27,14 +28,12 @@ const mySocialLinks = [
 
 function App() {
     return (
-        <div className="App">
-            <main>
-                <Hero />
-                <Marketing />
-            </main>
-            {/* Passando os dados com os links para o Footer */}
+        <>
+            <Hero />
+            <Marketing />
+            <Item />           
             <Footer socialLinks={mySocialLinks} />
-        </div>
+        </>
     )
 }
 
