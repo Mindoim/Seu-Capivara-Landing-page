@@ -251,7 +251,7 @@
 
 @media screen and (min-width: 1024px){
   .DivAnimacaoTextoDigitando {
-    font-size: var(--paragraph-animation-fontsize-desktop);
+    font-size: 40px;
     height: 15vh;
   }
 }
