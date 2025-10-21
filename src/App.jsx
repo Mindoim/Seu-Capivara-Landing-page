@@ -1,8 +1,8 @@
-import './App.css'
-import Item from "./components/Item/Item.jsx";
+import './App.css';
 import Hero from "./components/Hero/Hero.jsx";
 import Marketing from "./components/Marketing/Marketing.jsx";
 import Footer from "./components/Footer/Footer.jsx";
+import Item from "./components/Item/Item.jsx";
 
 // Dados para o Footer com links de imagens reais e links funcionais
 const mySocialLinks = [
@@ -31,10 +31,10 @@ function App() {
         <>
             <Hero />
             <Marketing />
-            <Item></Item>
+            <Item />
             <Footer socialLinks={mySocialLinks} />
         </>
     )
 }
 
-export default App
+export default App;
