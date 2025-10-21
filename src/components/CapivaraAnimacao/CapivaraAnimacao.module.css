@@ -1,11 +1,14 @@
 .GifCapivara {
     position: absolute;
-    width: 80vw;
+    touch-action: none;
+    pointer-events: auto;
+    width: 80%;
     height: auto;
     bottom: 14.5vh;
-    left: 100vw;
+    left: 100%;
     animation: CapivaraAndando 3s linear infinite;
     max-width: 576px;
+    overflow-x: hidden;
 }
 
 @keyframes CapivaraAndando {
@@ -14,7 +17,7 @@
     }
 
     100% {
-        transform: translateX(-200vw);
+        transform: translateX(-200%);
     }
 }
 

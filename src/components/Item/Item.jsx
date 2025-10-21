@@ -1,5 +1,5 @@
 import styles from './Item.module.css'
-import Carrosel from "./components/Carrosel/Carrosel.jsx";
+ import Carrosel from "./components/Carrosel/Carrosel.jsx";
 
 const Item = () => {
     return (

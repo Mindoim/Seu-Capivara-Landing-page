@@ -1,5 +1,7 @@
 .DivAnimacaoTextoDigitando{
     /*border: 3px solid red;*/
+    touch-action: none;
+    pointer-events: auto;
     height: 10vh;
     text-align: center;
     font-size: var(--paragraph-animation-fontsize-mobile);
@@ -13,6 +15,8 @@
     line-height: 100%;
     text-align: inherit;
     display: inline-block;
+    touch-action: none;
+    pointer-events: auto;
 }
 
 @media screen and (min-width: 767px) and (max-width: 1024px) {
