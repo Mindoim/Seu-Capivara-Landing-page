@@ -1,58 +1,259 @@
-.ContainerCard{
-    height: 100%;
-    width: 100vw;
-    background-image: url("../../../../assets/fundoHero.jpeg");
+/* ===== BASE STYLES ===== */
+.ContainerCard {
     display: flex;
     flex-direction: column;
     align-items: center;
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
+    height: 100%;
+    width: 100%;
+    background-image: url("../../../../assets/fundoHero.jpeg");
+    border: 1px solid black;
     flex-shrink: 0;
+
+    /* importante para posicionamento absoluto do card internamente */
+    position: relative;
 }
 
-.NomeDoProduto{
+/* garantir que a página não cresça além do full HD */
+:root {
+    --max-desktop-width: 1920px; /* limite máximo (full hd) */
+}
+
+/* elemento pai que contém os cards - recomenda-se manter aqui também */
+.divItem {
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+    max-width: var(--max-desktop-width); /* não cresce além de 1920px */
+    margin: 0 auto; /* centraliza no desktop */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* texto e imagem em largura responsiva para todas as telas */
+.NomeDoProduto {
     width: calc(100svw - 128px);
+    padding: 32px 0;
     font-family: var(--font-body);
     font-size: 24px;
     text-align: center;
-    padding: 32px 0;
-    text-decoration: underline 3px #cd9172;
+    text-decoration: underline 3px #CD9172;
     line-height: 130%;
 }
 
-.ImagemDoProdutoContainer{
+.ImagemDoProdutoContainer {
     width: calc(100svw - 128px);
     height: auto;
     border: 1px solid black;
 }
 
-.ImagemDoProduto{
+.ImagemDoProduto {
     width: 100%;
     height: auto;
-    object-fit: cover;
     aspect-ratio: 1/1;
+    object-fit: cover;
 }
 
-.DescricaoDoProduto{
+.DescricaoDoProduto {
     width: calc(100svw - 128px);
-    /*line-break: anywhere;*/
+    padding: 32px 0;
     font-family: Inter;
     font-size: 14px;
-    padding: 32px 0;
     text-justify: newspaper;
     line-height: 180%;
 }
 
+/* ===== MOBILE (390px+) ===== */
 @media screen and (min-width: 390px) {
-    .DescricaoDoProduto, .NomeDoProduto {
+    .NomeDoProduto,
+    .DescricaoDoProduto {
         padding: 64px 0;
     }
-    .NomeDoProduto{
+
+    .NomeDoProduto {
         font-size: 32px;
     }
 
-    .DescricaoDoProduto{
+    .DescricaoDoProduto {
         font-size: 16px;
+    }
+}
+
+/* ===== TABLET (768px+) ===== */
+@media screen and (min-width: 768px) {
+    .ContainerCard {
+        align-items: flex-start;
+        justify-content: center;
+        /* manter container relativo para posicionamento da imagem */
+        position: relative;
+    }
+
+    .NomeDoProduto,
+    .DescricaoDoProduto {
+        width: 40svw;
+        padding: 16px 0;
+        margin: 0 0 0 72px;
+    }
+
+    .NomeDoProduto {
+        margin-top: 48px;
+        font-size: 28px;
+        text-align: start;
+    }
+
+    .DescricaoDoProduto {
+        margin-bottom: 48px;
+    }
+
+    .ImagemDoProdutoContainer {
+        position: absolute;
+        width: 25svw;
+        height: auto;
+        left: calc(75svw - 72px);
+    }
+
+    /* Layout: LEFT position */
+    .ContainerCard[data-position="left"] {
+        align-items: flex-end;
+    }
+
+    .ContainerCard[data-position="left"] .ImagemDoProdutoContainer {
+        left: auto;
+        right: calc(75svw - 72px);
+    }
+
+    /* Layout: RIGHT position */
+    .ContainerCard[data-position="right"] {
+        align-items: flex-start;
+    }
+
+    .ContainerCard[data-position="right"] .ImagemDoProdutoContainer {
+        left: calc(75svw - 72px);
+        right: auto;
+    }
+}
+
+/* ===== DESKTOP (1024px+) ===== */
+@media screen and (min-width: 1024px) {
+    .ContainerCard {
+        align-items: flex-start;
+        justify-content: center;
+        position: relative;
+        max-width: 1920px; /* limite de largura total (full HD) */
+        margin: 0 auto;    /* centraliza o conteúdo */
+    }
+
+    .NomeDoProduto,
+    .DescricaoDoProduto {
+        width: 30svw;           /* mesmo do tablet */
+        padding: 16px 0;        /* um pouco maior que o tablet */
+        margin: 0 0 0 200px;    /* recuo maior */
+    }
+
+    .NomeDoProduto {
+        font-size: 48px;        /* aumenta fonte */
+        margin-top: 96px;
+        text-align: start;
+    }
+
+    .DescricaoDoProduto {
+        margin-bottom: 96px;
+        font-size: 20px;
+    }
+
+    .ImagemDoProdutoContainer {
+        position: absolute;
+        width: 25svw;           /* igual ao tablet */
+        height: auto;
+    }
+
+    /* Layout: LEFT position */
+    .ContainerCard[data-position="left"] {
+        align-items: flex-end;
+    }
+
+    .ContainerCard[data-position="left"] .ImagemDoProdutoContainer {
+        left: auto;
+        right: calc(75svw - 200px);
+    }
+
+    .ContainerCard[data-position="left"] .NomeDoProduto {
+        margin: 96px 200px 0 0;
+    }
+
+    .ContainerCard[data-position="left"] .DescricaoDoProduto {
+        margin: 0 200px 96px 0;
+
+    }
+
+    /* Layout: RIGHT position */
+    .ContainerCard[data-position="right"] {
+        align-items: flex-start;
+    }
+
+    .ContainerCard[data-position="right"] .ImagemDoProdutoContainer {
+        left: calc(75svw - 200px);
+        right: auto;
+    }
+
+
+}
+
+/* ===== FULL HD (1920px+) ===== */
+@media screen and (min-width: 1920px) {
+    .ContainerCard {
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+
+    .NomeDoProduto,
+    .DescricaoDoProduto {
+        font-size: 36px;
+        margin-left: 250px;
+        width: 35%;
+    }
+
+    .NomeDoProduto{
+        font-size: 64px;
+        margin-top: 160px;
+    }
+
+    .DescricaoDoProduto {
+        font-size: 32px;
+        margin-bottom: 160px;
+    }
+
+    .ImagemDoProdutoContainer {
+        width: 22svw;
+    }
+
+    /* Layout: LEFT position */
+    .ContainerCard[data-position="left"] {
+        align-items: flex-end;
+    }
+
+    .ContainerCard[data-position="left"] .ImagemDoProdutoContainer {
+        left: auto;
+        right: calc(75svw - 250px);
+    }
+
+    .ContainerCard[data-position="left"] .NomeDoProduto {
+        margin: 96px 250px 0 0;
+    }
+
+    .ContainerCard[data-position="left"] .DescricaoDoProduto {
+        margin: 0 250px 96px 0;
+
+    }
+
+    /* Layout: RIGHT position */
+    .ContainerCard[data-position="right"] {
+        align-items: flex-start;
+    }
+
+    .ContainerCard[data-position="right"] .ImagemDoProdutoContainer {
+        left: calc(75svw - 250px);
+        right: auto;
     }
 
 }

@@ -1,8 +1,8 @@
 import styles from './Card.module.css'
 
-const Card = ({NomeDoProduto, ImagemDoProduto, DescricaoDoProduto}) => {
+const Card = ({NomeDoProduto, ImagemDoProduto, DescricaoDoProduto, position}) => {
     return (
-        <div className={styles.ContainerCard}>
+        <div className={styles.ContainerCard} data-position={position}>
             <p className={styles.NomeDoProduto}>{NomeDoProduto}</p>
             <div className={styles.ImagemDoProdutoContainer}>
                 <img className={styles.ImagemDoProduto} src={ImagemDoProduto} alt={DescricaoDoProduto}/>
