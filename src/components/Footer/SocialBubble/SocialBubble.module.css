@@ -1,0 +1,53 @@
+.socialBubble {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #f0f0e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.socialBubble:hover {
+    transform: translateY(-5px) scale(1.05); /* Levantar e crescer um pouco */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+    background-color: #e0e0d0; /* Ligeira mudança de cor */
+}
+
+.bubbleImage {
+    width: 70%; /* Imagem ocupa 70% da bola */
+    height: 70%;
+    object-fit: contain; /* Garante que a imagem caiba sem distorcer */
+}
+
+/* -------------------------------------------------------------------------- */
+/* Responsividade do SocialBubble (ajustes de tamanho)                        */
+/* -------------------------------------------------------------------------- */
+
+/* Tablet pequeno (768px e acima) */
+@media screen and (min-width: 768px) {
+    .socialBubble {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* Desktop pequeno (1024px e acima) */
+@media screen and (min-width: 1024px) {
+    .socialBubble {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Desktop grande (1440px e acima) */
+@media screen and (min-width: 1440px) {
+    .socialBubble {
+        width: 120px;
+        height: 120px;
+    }
+}

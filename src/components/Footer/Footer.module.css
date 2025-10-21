@@ -1,0 +1,57 @@
+.footerContainer {
+    background-color: var(--color-bg-primary);
+    padding: 20px 0; /* Espaçamento vertical */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 150px; /* Altura mínima para o footer */
+}
+
+.socialBubblesWrapper {
+    display: flex;
+    gap: 20px; /* Espaço entre as bolas */
+    flex-wrap: wrap; /* Permitir que as bolas quebrem linha em telas menores */
+    justify-content: center; /* Centralizar as bolas */
+    align-items: center;
+    max-width: 1200px; /* Largura máxima para o wrapper */
+    padding: 0 15px; /* Padding nas laterais */
+}
+
+/* -------------------------------------------------------------------------- */
+/* Responsividade do Footer (ajustes do wrapper)                              */
+/* -------------------------------------------------------------------------- */
+
+/* Celular pequeno (até 370px) */
+@media screen and (max-width: 370px) {
+    .socialBubblesWrapper {
+        gap: 15px; /* Reduz um pouco o espaço entre as bolas */
+    }
+}
+
+/* Celular médio (371px a 411px) */
+@media screen and (min-width: 371px) and (max-width: 411px) {
+    .socialBubblesWrapper {
+        gap: 20px; /* Espaçamento padrão */
+    }
+}
+
+/* Tablet (768px e acima) */
+@media screen and (min-width: 768px) {
+    .footerContainer {
+        padding: 30px 0;
+    }
+    .socialBubblesWrapper {
+        gap: 30px; /* Aumenta o espaço entre as bolas */
+    }
+}
+
+/* Desktop (1024px e acima) */
+@media screen and (min-width: 1024px) {
+    .footerContainer {
+        padding: 40px 0;
+    }
+    .socialBubblesWrapper {
+        gap: 40px; /* Mais espaço entre as bolas em telas maiores */
+    }
+}
