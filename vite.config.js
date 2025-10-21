@@ -20,6 +20,7 @@ export default defineConfig({
       storybookTest({
         configDir: path.join(dirname, '.storybook')
       })],
+      base: '/Seu-Capivara-Landing-page',
       test: {
         name: 'storybook',
         browser: {
