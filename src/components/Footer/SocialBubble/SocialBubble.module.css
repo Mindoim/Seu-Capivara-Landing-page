@@ -1,16 +1,14 @@
 .socialBubble {
-    /* Tamanho base para mobile */
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: #f0f0e8; /* Cor da bola */
+    background-color: #f0f0e8;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sutil sombra para profundidade */
-    text-decoration: none; /* Remover sublinhado do link */
-
-    /* Transição para o efeito de hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    cursor: pointer;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 

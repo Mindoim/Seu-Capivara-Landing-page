@@ -1,6 +1,5 @@
-/* Removemos o :root e aplicamos a cor diretamente */
 .footerContainer {
-    background-color: #2e7d32; /* Verde escuro - Altere aqui se necessário */
+    background-color: var(--color-bg-primary);
     padding: 20px 0; /* Espaçamento vertical */
     display: flex;
     justify-content: center;
